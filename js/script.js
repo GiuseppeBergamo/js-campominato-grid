@@ -35,7 +35,7 @@ const totalCells = rows * cells;
 
 button.addEventListener("click", function () {
     for (i = 1; i <= totalCells; i++) {
-        const cell = createCell();
+        const cell = createCell(i);
 
         grid.appendChild(cell);
     }
