@@ -37,6 +37,12 @@ button.addEventListener("click", function () {
     for (i = 1; i <= totalCells; i++) {
         const cell = createCell(i);
 
+        cell.addEventListener("click", function () {
+            cell.classList.toggle("clicked");
+
+            console.log("hai cliccato la cella numero: " + cell.innerText);
+        })
+
         grid.appendChild(cell);
     }
 })
