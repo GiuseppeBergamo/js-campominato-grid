@@ -16,3 +16,27 @@ In ogni cella, deve comparire il numero corrispondente, in ordine da 1 a 100;
 Al click sulla cella, stampiamo il numero della cella cliccata in console, poi coloriamo la cella d'azzurro!
 
 */
+
+const button = document.getElementById("gioca");
+const grid = document.getElementById("grid");
+
+
+const createCell = (number) => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    cell.innerText = number;
+    return cell;
+}
+
+
+const rows = 10;
+const cells = 10;
+const totalCells = rows * cells;
+
+button.addEventListener("click", function () {
+    for (i = 1; i <= totalCells; i++) {
+        const cell = createCell();
+
+        grid.appendChild(cell);
+    }
+})
